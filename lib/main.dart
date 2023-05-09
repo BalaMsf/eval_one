@@ -1,7 +1,7 @@
+import 'package:eval_one/view/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'Screens/homepage.dart';
 import 'bloc_pattern/speedo_bloc.dart';
 
 void main() {
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SpeedoBloc(value: 0),
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()),
+      child: const MaterialApp(
+          debugShowCheckedModeBanner: false, home: HomePage()),
     );
   }
 }

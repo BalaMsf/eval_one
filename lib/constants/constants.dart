@@ -1,6 +1,6 @@
 class AppConstants {
   static String title = "Speedo Meter";
-  static String buttonText = 'Click here';
+  static String buttonText = 'Click';
   static String s1 = "S1";
   static String s2 = "S2";
   static String s3 = "S3";

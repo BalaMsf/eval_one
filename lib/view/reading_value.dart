@@ -2,24 +2,22 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../constants/constants.dart';
 
 class ReadingValue extends CustomPainter {
-  double PI = math.pi;
+  double piValue = math.pi;
 
   double degreeToRadian(double degree) {
-    return degree * PI / 180;
+    return degree * piValue / 180;
   }
 
-//s3
   @override
   void paint(Canvas canvas, Size size) {
     var radius = size.width / 2;
-
+// S3
     final TextPainter textPainter = TextPainter(
         text: TextSpan(
-            text: AppConstants.s3, style: TextStyle(color: Colors.red)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.s3, style: const TextStyle(color: Colors.red)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
     textPainter.paint(canvas, Offset(-30, size.height / 2));
@@ -34,8 +32,7 @@ class ReadingValue extends CustomPainter {
     var offsetS2 = Offset(dx, dy);
     final TextPainter textPainter2 = TextPainter(
         text: TextSpan(
-            text: AppConstants.s2, style: TextStyle(color: Colors.red)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.s2, style: const TextStyle(color: Colors.red)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width / 2);
     textPainter2.paint(canvas, offsetS2);
@@ -50,8 +47,7 @@ class ReadingValue extends CustomPainter {
     var offsetS1 = Offset(dx, dy);
     final TextPainter textPainter3 = TextPainter(
         text: TextSpan(
-            text: AppConstants.s1, style: TextStyle(color: Colors.red)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.s1, style: const TextStyle(color: Colors.red)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
     textPainter3.paint(canvas, offsetS1);
@@ -62,8 +58,8 @@ class ReadingValue extends CustomPainter {
     var offsetp = Offset(dx, dy);
     final TextPainter textPainter4 = TextPainter(
         text: TextSpan(
-            text: AppConstants.pivot, style: TextStyle(color: Colors.black)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.pivot,
+            style: const TextStyle(color: Colors.black)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
     textPainter4.paint(canvas, offsetp);
@@ -76,8 +72,7 @@ class ReadingValue extends CustomPainter {
     var offsetR3 = Offset(dx, dy);
     final TextPainter textPainter5 = TextPainter(
         text: TextSpan(
-            text: AppConstants.r3, style: TextStyle(color: Colors.green)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.r3, style: const TextStyle(color: Colors.green)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
     textPainter5.paint(canvas, offsetR3);
@@ -88,8 +83,7 @@ class ReadingValue extends CustomPainter {
     var offsetR2 = Offset(dx, dy);
     final TextPainter textPainter6 = TextPainter(
         text: TextSpan(
-            text: AppConstants.r2, style: TextStyle(color: Colors.green)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.r2, style: const TextStyle(color: Colors.green)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
     textPainter6.paint(canvas, offsetR2);
@@ -100,8 +94,7 @@ class ReadingValue extends CustomPainter {
     var offsetR1 = Offset(dx, dy);
     final TextPainter textPainter7 = TextPainter(
         text: TextSpan(
-            text: AppConstants.r1, style: TextStyle(color: Colors.green)),
-        textAlign: TextAlign.justify,
+            text: AppConstants.r1, style: const TextStyle(color: Colors.green)),
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
     textPainter7.paint(canvas, offsetR1);
