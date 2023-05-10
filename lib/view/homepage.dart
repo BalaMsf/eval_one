@@ -1,4 +1,4 @@
-import 'package:eval_one/view/reading_value.dart';
+import 'package:eval_one/view/pointing_value.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,7 +7,7 @@ import '../bloc_pattern/speedo_bloc.dart';
 import '../bloc_pattern/speedo_event.dart';
 import '../bloc_pattern/speedo_state.dart';
 import '../constants/constants.dart';
-import 'circle.dart';
+import 'speedomter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -80,7 +80,7 @@ class _MainScreenState extends State<HomePage> {
                           size: const Size(270, 270),
                           painter: CircleWidget(
                               inputValue: int.parse(inputValue ?? '0')),
-                          foregroundPainter: ReadingValue(),
+                          foregroundPainter: PointingValue(),
                         );
                       }),
                       // ),

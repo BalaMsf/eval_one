@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
 
-class ReadingValue extends CustomPainter {
+class PointingValue extends CustomPainter {
   double piValue = math.pi;
 
   double degreeToRadian(double degree) {
